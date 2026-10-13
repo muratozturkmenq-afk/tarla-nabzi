@@ -1,4 +1,4 @@
-/* Tarla Nabzı v2 · interactions */
+/* AgroVerix v2 · interactions */
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
