@@ -1,10 +1,10 @@
-# AGENTS.md · Tarla Nabzı sitesi
+# AGENTS.md · AgroVerix sitesi
 
 Bu dosya, bu projede çalışan yapay zekâ kod asistanları (ChatGPT Codex vb.) içindir. Her işe başlamadan önce oku ve kurallara uy.
 
 ## Proje ne?
 
-Tarla Nabzı, çift yönlü bir tarım verisi platformunun tanıtım sitesidir:
+AgroVerix, çift yönlü bir tarım verisi platformunun tanıtım sitesidir:
 
 - **Çiftçi tarafı (ücretsiz):** Çiftçi tarlasını (konum, gerçek dekar, ürün, tahmini verim) ve sezon boyunca yaptığı her işlemi (sürüm, ekim, gübre, sulama, ilaçlama, hasat) kaydeder. Her kayıttan sonra 1 kg ürünün kendisine maliyetini görür. Hasatta gerçek verimi girer, sezon raporu ve öneri alır.
 - **Firma tarafı (ücretli):** Aynı kayıtlar, çiftçinin açık rızasıyla ve anonim, toplu hâlde, ilaç, tohum ve gübre firmalarına bölgesel içgörü, rapor, hedefli kampanya ve danışmanlık olarak sunulur. Klasik anket şirketlerine (ilçe başına yaklaşık 20 kişiyle konuşan, ~8.000 euroluk anketler) alternatiftir.
