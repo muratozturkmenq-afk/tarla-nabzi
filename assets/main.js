@@ -875,6 +875,47 @@
     (function loop(n) { if (vis) draw(n / 1000); requestAnimationFrame(loop); })(0);
   })();
 
+  /* ---------- Türkiye il / ilçe seçimleri ---------- */
+  (function locationSelects() {
+    var province = $("#f-il"), district = $("#f-ilce");
+    if (!province || !district) return;
+    fetch("assets/data/il-ilce.json")
+      .then(function (response) {
+        if (!response.ok) throw new Error("İlçe listesi yüklenemedi");
+        return response.json();
+      })
+      .then(function (data) {
+        data.cities.forEach(function (city) {
+          var option = document.createElement("option");
+          option.value = city.name;
+          option.textContent = city.name;
+          province.appendChild(option);
+        });
+        province.addEventListener("change", function () {
+          var selected = data.cities.find(function (city) { return city.name === province.value; });
+          district.replaceChildren();
+          var placeholder = document.createElement("option");
+          placeholder.value = "";
+          placeholder.textContent = selected ? "İlçe seçin" : "Önce il seçin";
+          district.appendChild(placeholder);
+          district.disabled = !selected;
+          if (!selected) return;
+          selected.districts.forEach(function (name) {
+            var option = document.createElement("option");
+            option.value = name;
+            option.textContent = name;
+            district.appendChild(option);
+          });
+        });
+      })
+      .catch(function () {
+        province.innerHTML = '<option value="">İl listesi yüklenemedi</option>';
+        district.innerHTML = '<option value="">İlçe listesi yüklenemedi</option>';
+        province.disabled = true;
+        district.disabled = true;
+      });
+  })();
+
   /* ---------- forms ---------- */
   function demo(fid, oid, msg) { var f = $("#" + fid); f.addEventListener("submit", function (e) { e.preventDefault(); $("#" + oid).textContent = msg(); }); }
   demo("form-f", "f-ok", function () { return "Konsept sayfa: bilgileriniz henüz bir yere gönderilmiyor veya kaydedilmiyor. Canlı sürümde " + $("#f-adsoyad").value.trim() + " adına " + $("#f-il").value.trim() + " / " + $("#f-ilce").value.trim() + " / " + $("#f-koy").value.trim() + " konumundaki " + fmt(+$("#f-alan").value || 0) + " dekarlık " + $("#f-urun").value.toLocaleLowerCase("tr-TR") + " tarlanız için tarla defteri açılacak."; });
