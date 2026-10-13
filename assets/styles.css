@@ -557,3 +557,11 @@ p { margin: 0; }
   .ps { font-size: 12px; gap: 7px; }
   .opi { padding: 6px 8px; }
 }
+
+
+/* Farmer registration fields and consent */
+.cform .consent-field { grid-column: 1 / -1; display: grid; grid-template-columns: 18px minmax(0, 1fr); align-items: start; gap: 10px; padding: 12px; border: 1px solid rgba(237, 180, 62, .28); border-radius: 10px; background: rgba(13, 16, 11, .28); }
+.cform .consent-field input[type="checkbox"] { width: 16px; height: 16px; margin: 3px 0 0; accent-color: var(--gold); }
+.cform .consent-field label { color: var(--cotton); font-size: 12.5px; line-height: 1.55; }
+.cform .consent-field a { color: var(--gold-2); text-underline-offset: 3px; }
+.cform .fld input::placeholder { color: rgba(241, 243, 234, .42); }
