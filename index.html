@@ -704,12 +704,19 @@
       <div class="cform f">
         <p class="eyebrow">Çiftçiler için · ücretsiz</p>
         <h3>Tarlanı kaydet, ilk kilo maliyetini gör</h3>
-        <form id="form-f" novalidate>
-          <div class="fld"><label for="f-il">İl</label><input id="f-il" type="text" value="Şanlıurfa" autocomplete="off"></div>
-          <div class="fld"><label for="f-urun">Ürün</label><select id="f-urun"><option>Pamuk</option><option>Buğday</option><option>Mısır</option><option>Ayçiçeği</option><option>Domates</option></select></div>
-          <div class="fld full"><label for="f-alan">Alan (dekar)</label><input id="f-alan" type="number" min="1" value="20"></div>
+        <form id="form-f">
+          <div class="fld"><label for="f-adsoyad">Adı Soyadı</label><input id="f-adsoyad" name="adsoyad" type="text" placeholder="Adınız ve soyadınız" autocomplete="name" required></div>
+          <div class="fld"><label for="f-il">İl</label><input id="f-il" name="il" type="text" placeholder="Örn. Şanlıurfa" autocomplete="address-level1" required></div>
+          <div class="fld"><label for="f-ilce">İlçe</label><input id="f-ilce" name="ilce" type="text" placeholder="İlçe adı" autocomplete="address-level2" required></div>
+          <div class="fld"><label for="f-koy">Köy / Mahalle</label><input id="f-koy" name="koy" type="text" placeholder="Köy veya mahalle adı" required></div>
+          <div class="fld"><label for="f-alan">Tarla büyüklüğü (dekar)</label><input id="f-alan" name="alan" type="number" min="0.1" step="0.1" placeholder="Örn. 20" required></div>
+          <div class="fld"><label for="f-urun">Ürün</label><select id="f-urun" name="urun" required><option value="">Ürün seçin</option><option>Pamuk</option><option>Buğday</option><option>Mısır</option><option>Ayçiçeği</option><option>Domates</option></select></div>
+          <div class="fld full consent-field">
+            <input id="f-kvkk" name="kvkk" type="checkbox" required>
+            <label for="f-kvkk">KVKK Aydınlatma Metni’ni okudum; kayıt bilgilerimin tarla defteri hizmeti için işlenmesine ve kimliksizleştirilmiş verilerimin toplu analizlerde kullanılmasına açık rıza veriyorum. <a href="#kvkk">KVKK bilgileri</a>.</label>
+          </div>
           <button class="btn btn-gold full" type="submit">Tarlamı kaydet <span class="arr">→</span></button>
-          <p class="ok" id="f-ok" role="status"></p>
+          <p class="ok" id="f-ok" role="status" aria-live="polite"></p>
         </form>
       </div>
       <div class="cform c">
