@@ -522,7 +522,7 @@ p { margin: 0; }
 #wheat { display: none; }
 .cta-inner { position: relative; z-index: 1; display: grid; gap: 34px; padding-bottom: clamp(80px, 10vw, 140px); }
 .cta h2 { font-size: clamp(2.2rem, 6vw, 5rem); max-width: 16ch; }
-.cta-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cta-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 @media (max-width: 860px) { .cta-grid { grid-template-columns: minmax(0, 1fr); } }
 .cform { border-radius: 24px; padding: clamp(20px, 3vw, 30px); display: grid; gap: 14px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
 .cform.f { background: rgba(237, 180, 62, .14); border: 1px solid rgba(237, 180, 62, .35); }
