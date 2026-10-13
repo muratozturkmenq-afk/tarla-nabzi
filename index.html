@@ -706,8 +706,8 @@
         <h3>Tarlanı kaydet, ilk kilo maliyetini gör</h3>
         <form id="form-f">
           <div class="fld"><label for="f-adsoyad">Adı Soyadı</label><input id="f-adsoyad" name="adsoyad" type="text" placeholder="Adınız ve soyadınız" autocomplete="name" required></div>
-          <div class="fld"><label for="f-il">İl</label><input id="f-il" name="il" type="text" placeholder="Örn. Şanlıurfa" autocomplete="address-level1" required></div>
-          <div class="fld"><label for="f-ilce">İlçe</label><input id="f-ilce" name="ilce" type="text" placeholder="İlçe adı" autocomplete="address-level2" required></div>
+          <div class="fld"><label for="f-il">İl</label><select id="f-il" name="il" autocomplete="address-level1" required><option value="">İl seçin</option></select></div>
+          <div class="fld"><label for="f-ilce">İlçe</label><select id="f-ilce" name="ilce" autocomplete="address-level2" required disabled><option value="">Önce il seçin</option></select></div>
           <div class="fld"><label for="f-koy">Köy / Mahalle</label><input id="f-koy" name="koy" type="text" placeholder="Köy veya mahalle adı" required></div>
           <div class="fld"><label for="f-alan">Tarla büyüklüğü (dekar)</label><input id="f-alan" name="alan" type="number" min="0.1" step="0.1" placeholder="Örn. 20" required></div>
           <div class="fld"><label for="f-urun">Ürün</label><select id="f-urun" name="urun" required><option value="">Ürün seçin</option><option>Pamuk</option><option>Buğday</option><option>Mısır</option><option>Ayçiçeği</option><option>Domates</option></select></div>
