@@ -2,6 +2,8 @@
 
 Çift yönlü tarım verisi platformunun tanıtım sitesi: çiftçiye ücretsiz tarla defteri ve kilo maliyeti, tarım firmalarına izinli ve anonim saha içgörüleri.
 
+Yayın adresi: [https://agroverix.vercel.app/](https://agroverix.vercel.app/)
+
 ## Teknik yapı
 
 - Saf statik site; derleme adımı veya paket yöneticisi gerektirmez.
