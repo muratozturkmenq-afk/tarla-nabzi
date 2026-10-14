@@ -797,7 +797,7 @@
         sv("rect", { x: p[0] + 3.5, y: p[1] + 3.5, width: 3, height: 3, fill: "#1B1403" }, qr);
       });
     }
-    var lines = ["Pamuğunun 1 kilosu", "sana kaça mal", "oluyor? Tarlanı", "kaydet, ücretsiz", "tn.link/pamuk"];
+    var lines = ["Pamuğunun 1 kilosu", "sana kaça mal", "oluyor? Tarlanı", "kaydet, ücretsiz", "agroverix/pamuk"];
     var spans = lines.map(function (_, i) { return $("#sms-" + (i + 1)); });
     function type() {
       spans.forEach(function (s) { s.textContent = ""; });
